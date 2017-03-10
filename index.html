@@ -57,7 +57,7 @@ JavaScript can create new HTML events in the page -->
   <br>
   <br>
 	<!-- Why should we only use document.write for testing? Using document.write() after an HTML document is fully loaded will delete all existing HTML!-->
-	<button onclick="document.write(5 + 6)">Push me to delete everything but the number eleven</button>
+	<button onclick="document.write('Javier 16')">Push me to delete everything but the number eleven</button>
 
 	<!-- OH NOES! Better reload the browser! But First:-->
 
@@ -74,7 +74,7 @@ JavaScript can create new HTML events in the page -->
 
 	<!--***HINT: Did you notice how I needed to type in an extra space at the end of my sentence (also known as 'string') so that the numeral wouldn't smush into it when we print to console?-->
 	<script>
-		console.log('Hi! I am here in your console with the number eleven! ' + (5 + 6));
+		console.log('Hi form the console! This is Javier ');
 	</script>
 
 <!-- TO DO: Print 'Hi from the console! This is ' + YOURNAME displayed in your browser console. Take a screenshot (press command + shift + 3), rename the image to console.png, put it in this (jsFun) folder, and push back up to your branch on GitHub-->
@@ -97,7 +97,11 @@ JavaScript can create new HTML events in the page -->
 
 	<!-- YOUR CODE GOES HERE!  -->
 
-
+<p id='bday'></p>
+    
+    <script>
+        document.getElementById('bday').innerHTML = '"My name is Javier Li" "My birthday is August 27"'
+    </script>
 
 	<!-- BACK TO THE ASSIGNMENT!  -->
   <br>
@@ -118,6 +122,9 @@ window.alert(5 + 6);
 
 	<!-- YOUR CODE GOES HERE!  -->
 
+    <script>
+        window.alert('"Hi! My name is Javier Li"')
+    </script>
 
 
 	<!-- BACK TO THE ASSIGNMENT!  -->
@@ -138,11 +145,11 @@ window.alert(5 + 6);
 
  <img id="image" src="images/smiley.gif" width="160" height="120">
 
-<!-- <script>
+ <script>
 document.getElementById("image").src = "images/landscape.jpg";
 </script>
 
-<p>The original image was smiley.gif, but the script changed it to landscape.jpg</p> -->
+<p>The original image was smiley.gif, but the script changed it to landscape.jpg</p> 
 <br>
 <br>
 
@@ -171,6 +178,14 @@ Find two images, and make your own picture switcher below
 -->
 
 <!-- YOUR CODE GOES HERE!  -->
+
+    <script>
+    var imgChange = function(){
+        document.getElementById('theSponge').src = 'sponge2.jpeg';
+        };
+        </script>
+<img id="theSponge" src='sponge.jpeg' width="160" height="120">
+<p><input type="button" id="theButton" value="Hey! Click me!" onclick=imgChange()></p>
 
 
 
