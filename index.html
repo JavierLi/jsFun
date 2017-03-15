@@ -228,7 +228,27 @@ Find some images, and make your own picture flipper below.
 
 <!-- YOUR CODE GOES HERE!  -->
 
+<script>
+var myMemes = ['memes/joke.jpg', 'memes/sponge.jpg', 'memes/relax.jpg', 'memes/curse.jpg', 'memes/penguin.jpg', 'memes/tf2.png', 'memes/food.png'];
 
+//set the count at zero- this way, we will be sure to start at the beginning of our array of images
+var memesIndex = 0;
+    
+    var changeMemes = function () {
+        var img = document.getElementById('meme');
+        
+        memesIndex = ++memesIndex % 7;
+        
+        img.src = myMemes[memesIndex];
+    };
+    </script>
+    
+    <p><input type="button" id='button3' value="Click here for some dank memes!" onclick=changeMemes()></p>
+    
+    <img id="meme" src='memes/pupper.png' width="300">
+    
+ 
+    
 
 <!-- CONGRATULATIONS! YOU'VE REACHED THE END OF THE ASSIGNMENT! Don't forget to commit your code! -->
 
